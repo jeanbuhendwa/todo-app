@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Todo List</h1>
+        </div>
+        <hr>
+        <div class="taskAdd">
+            <input id="input" type="text" placeholder="Add new task here ...">
+            <button id="button" onclick="openPop()">Add</button>
+        </div>
+        <div class="tasks">
+            <ul>
+                <li>Wake up</li>
+                <li>Push up</li>
+            </ul>
+        </div>
+        <div class="profile">
+            <img src="img/profile1.png" alt="profile photo">
+            <h2>John Buhendwa</h2>
+        </div>
+        <!-- Adding the popup message  -->
+        <div class="popup" id="popup">
+            <img src="img/done.jpeg" alt="tick image">
+            <h2>Done</h2>
+            <P>Please click "OK" to add more tasks</P>
+            <button type="button" onclick="closePop()">OK</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var popup = document.getElementById("popup");
+
+        function openPop (){
+            popup.classList.add("popStyle");
+        }
+
+        function closePop(){
+            popup.classList.remove("popStyle");
+        }
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
